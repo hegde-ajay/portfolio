@@ -162,3 +162,11 @@ document.addEventListener('mousemove', (e) => {
     orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
   });
 });
+
+// ===== BACK TO TOP BUTTON =====
+const backToTop = document.getElementById('back-to-top');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 600);
+  });
+}
